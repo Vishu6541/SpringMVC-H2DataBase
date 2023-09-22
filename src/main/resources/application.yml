@@ -1,0 +1,67 @@
+spring:
+  profiles:
+    active: development
+---
+
+spring:
+  config:
+    activate:
+      on-profile: development
+  datasource:
+    url: jdbc:h2:mem:mphasisdb
+    driver-class-name: org.h2.Driver
+    username: sa
+    password: password
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    show-sql: true
+    hibernate:
+      ddl-auto: create-drop
+  h2:
+    console:
+      enabled: true
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+logging:
+  file:
+    path: /tmp/h2db.log
+
+---
+
+spring:
+  config:
+    activate:
+      on-profile: production
+  datasource:
+    url: jdbc:mysql://localhost:3306/march_learning
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: vishu
+    password: java@123
+    hikari:
+      maximum-pool-size: 5
+      connection-timeout: 6000
+  jpa:
+    database-platform: org.hibernate.dialect.MySQLDialect
+    show-sql: true
+    hibernate:
+      ddl-auto: create-drop
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+logging:
+  file:
+    path: /tmp/h2db.log
+  
+      
+
+    
+      
