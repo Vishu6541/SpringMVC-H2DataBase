@@ -5,6 +5,10 @@ services:
     container_name: springboot-app
     ports:
       - "8080:8080"
+    volumes:
+     - /home/vishu/Documents/docker_volume/logs:/tmp
+    environment:
+     - SPRING_PROFILE=production
     depends_on:
       - mysql-db
 
