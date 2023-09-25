@@ -1,6 +1,6 @@
 spring:
   profiles:
-    active: development
+    active: production
 ---
 
 spring:
@@ -16,7 +16,7 @@ spring:
     database-platform: org.hibernate.dialect.H2Dialect
     show-sql: true
     hibernate:
-      ddl-auto: create-drop
+      ddl-auto: create
   h2:
     console:
       enabled: true
@@ -38,7 +38,7 @@ spring:
     activate:
       on-profile: production
   datasource:
-    url: jdbc:mysql://192.168.8.1:3306/march_learning
+    url: jdbc:mysql://192.168.1.8:3306/march_learning
     driver-class-name: com.mysql.cj.jdbc.Driver
     username: root
     password: 
@@ -46,10 +46,10 @@ spring:
       maximum-pool-size: 5
       connection-timeout: 6000
   jpa:
-    database-platform: org.hibernate.dialect.MySQLDialect
+    database-platform: org.hibernate.dialect.MySQL8Dialect
     show-sql: true
     hibernate:
-      ddl-auto: create-drop
+      ddl-auto: create
 
 management:
   endpoints:
