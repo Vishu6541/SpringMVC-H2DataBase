@@ -28,6 +28,6 @@ volumes:
     driver: local
     driver_opts:
       type: none
-      device: /home/vishu/Documents/docker_volume/database
+      device: /home/vishu/Documents/docker_volume/database2
       o: bind
 
