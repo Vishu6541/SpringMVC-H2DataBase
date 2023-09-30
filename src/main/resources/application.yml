@@ -38,7 +38,7 @@ spring:
     activate:
       on-profile: production
   datasource:
-    url: jdbc:mysql://192.168.1.8:3306/march_learning
+    url: jdbc:mysql://43.205.214.202:3306/march_learning
     driver-class-name: com.mysql.cj.jdbc.Driver
     username: root
     password: 

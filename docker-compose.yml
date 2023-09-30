@@ -1,7 +1,7 @@
 version: '3'
 services:
   springboot-app:
-    image: h2db:1
+    image: vishujava6541/spring-boot-h2-mysql:latest
     container_name: springboot-app
     ports:
       - "8080:8080"
